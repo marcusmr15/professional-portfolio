@@ -1,23 +1,24 @@
 body {
-  color: #063970;
+  color: #231b13;
   font-size: 20px;
   font-family: sans-serif;
   line-height: 1.5;
 }
 
 header {
-  background-color: #063970;
-  color: #eab676;
-  height: 200px;
+  background-color: #043e6f;
+  color: #879483;
+  height: 100px;
 }
 
 .headerLayout {
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: flex-end;
 }
 #headerTitle {
-  background-color: #eab676;
+  background-color: #879483;
   color: #063970;
   padding: 10px;
   width: 300px;
@@ -30,21 +31,39 @@ header {
   padding: 10px;
 }
 #space {
-  width: 500px;
+  width: 1000px;
 }
 #aboutMe {
-  background-color: red;
+  background-color: white;
 }
 #work {
-  background-color: purple;
-}
-#contactMe {
   background-color: green;
 }
+#contactMe {
+  background-color: yellow;
+}
 #resume {
-  background-color: brown;
+  background-color: peru;
 }
 
+.imageLayout {
+  padding: 10px;
+  background-color: #2f70a2;
+  width: 1920px;
+  height: 470px;
+}
+#image {
+  width: 1900px;
+  height: 450px;
+  display: flex;
+  transform: scaleX(-1);
+}
+#subtitle {
+  display: flex;
+  justify-content: flex-end;
+  background-color: red;
+  width: 510px;
+}
 
 .footer {
   padding: 20px;
