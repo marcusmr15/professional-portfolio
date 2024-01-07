@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    min-height: 100%;
+    line-height: 1;
+  }
+
+    /* Resetting headers */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+  }
+
+   /* Resetting form elements */
+  input, select, option, optgroup, textarea, button, pre, code {
+    font-size: 100%;
+    font-family: inherit;
+  }
+  
+    /* Resetting lists styles */
+  ul, ol {
+    list-style: none;
+  }
+
+    /* Resetting links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+

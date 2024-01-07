@@ -1,0 +1,58 @@
+body {
+  color: #063970;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #063970;
+  color: #eab676;
+  height: 200px;
+}
+
+.headerLayout {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+#headerTitle {
+  background-color: #eab676;
+  color: #063970;
+  padding: 10px;
+  width: 300px;
+  text-align: end;
+  font-size: 30px;
+}
+.headerLinks {
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+}
+#space {
+  width: 500px;
+}
+#aboutMe {
+  background-color: red;
+}
+#work {
+  background-color: purple;
+}
+#contactMe {
+  background-color: green;
+}
+#resume {
+  background-color: brown;
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: #e867ed;
+  font-weight: bold;
+}
+
+/* border: 1px dashed;
+  word-break: break-all;
+  white-space: pre-wrap; */
