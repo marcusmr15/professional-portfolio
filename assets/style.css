@@ -8,12 +8,11 @@ body {
 header {
   background-color: #043e6f;
   color: #879483;
-  
 }
 
 .headerLayout {
   padding-top: 10px;
-  padding-right: 40px;
+  padding-right: 30px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -29,22 +28,14 @@ header {
 }
 .headerLinks {
   padding: 10px;
+  padding-right: 50px;
   text-align: center;
 }
 #space {
-  width: 1000px;
+  width: 500px;
 }
-#aboutMe {
-  
-}
-#work {
- 
-}
-#contactMe {
-  
-}
-#resume {
-  
+#linksBorder {
+  text-decoration: underline 2px solid #879483;
 }
 
 .imageLayout {
@@ -58,11 +49,36 @@ header {
   object-fit: cover;
 }
 #subtitle {
-  background-color: gray;
+  background-color: #879483;
   padding: 10px;
   
   display: flex;
   justify-content: flex-end;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contactLayout {
+  display: inline-flex;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.contactContents {
+  display: flex;
+  
+}
+.underline {
+  border-bottom: 4px solid #879483;
+  width: fit-content;
+}
+
+.linksStyle {
+  color: blue;
 }
 
 .footer {
