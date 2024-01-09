@@ -14,9 +14,9 @@
    <div class="headerLayout">
       <div><h1 id="headerTitle">Marcos Muñoz</h1></div>
       <div class=headerLinks id="space"></div>
-      <div class=headerLinks id="linksBorder">About Me</div>
-      <div class=headerLinks id="linksBorder">Work</div>
-      <div class=headerLinks id="linksBorder">Contact Me</div>
+      <div class=headerLinks id="linksBorder"> <a href="#aboutMeTitle">About Me</a></div>
+      <div class=headerLinks id="linksBorder"> <a href="#workTitle">Work</a></div>
+      <div class=headerLinks id="linksBorder"> <a href="#contactTitle">Contact Me</a></div>
       <div class=headerLinks id="linksBorder">Résumé</div>
    </div>
  </header>
@@ -27,37 +27,43 @@
       <div><h2 id="subtitle">QA Tester with a bachelor’s degree in Audio Engineering</h2></div>
    </div>
 
-   <section>
-      <div>
-         <h2>About Me</h2>
-         <p>I have 2+ years of experience in the testing field. I am proficient in software like Jira, TestRail, and Microsoft Office. I am also a very dedicated and creative person, thus allowing me to focus intensely on achieving anything I set my mind to. Being a team player and the ability to adapt to any given project is something that comes naturally to me. I learn and develop new skills in short periods and can communicate efficiently while maintaining a professional and friendly environment. I am currently learning web development, and so far I have acquired skills in software like VS Code and Git; as well as a strong foundation in the HTML and CSS coding languages.</p>
-      </div>
-   </section>
+   <div id="border2">
+      <section>
+         <div>
+            <h2 class="titles2" id="aboutMeTitle">About Me</h2>
+            <p id="textAbout">I have 2+ years of experience in the testing field. I am proficient in software like Jira, TestRail, and Microsoft Office. I am also a very dedicated and creative person, thus allowing me to focus intensely on achieving anything I set my mind to. Being a team player and the ability to adapt to any given project is something that comes naturally to me. I learn and develop new skills in short periods and can communicate efficiently while maintaining a professional and friendly environment. I am currently learning web development, and so far I have acquired skills in software like VS Code and Git; as well as a strong foundation in the HTML and CSS coding languages.</p>
+       </div>
+      </section>
 
-   <section>
-      <div>
-         <h2>Work</h2>
-         <img src="./assets/images/prework-study-guide.png" alt="Image of Marcos Munoz’s left side face, wearing glasses, and a blue sky in the background." id="image2"/>
-         
-      </div>
-   </section>
+      <section>
+         <h2 class="titles2" id="workTitle">Work</h2>
+         <div class="workLayout">
+            <div>
+               <a href="https://marcusmr15.github.io/prework-study-guide/" target="_blank">
+                  <img src="./assets/images/prework-study-guide.png" alt="Image of the deployed application 'Prework Study Guide'" class="image2"/>
+               </a>
+            </div>
+            <div>
+               <a href="https://marcusmr15.github.io/01challenge/" target="_blank">
+                  <img src="./assets/images/refactoring.png" alt="Image of the deployed application '01-challenge'" class="image2"/>
+               </a>
+            </div>
+         </div>
+      </section>
 
-   <section id="contactLayout">
-      <h2 id="contactTitle">Contact</h2>
-      <div class="contactContents">
-         <div class="underline" id="phone">+52 55 2916 2619</div>
-         <div class="underline" id="email">marcosmunozr15@gmail.com</div>
-         <div class="underline"><a href="https://github.com/marcusmr15?tab=repositories" target="_blank" class="linksStyle">GitHub</a></div>
-         <div class="underline"><a href="https://www.linkedin.com/in/marcos-mu%C3%B1oz-rodr%C3%ADguez-99a51a1b2/" target="_blank" class="linksStyle">LinkedIn</a></div>
-         <div class="underline"><a href="https://open.spotify.com/artist/2aIYbcsZ3GlFy8fDPDJrcc?si=c9x_zDpzSh6vvQYLtn3fUw" target="_blank" class="linksStyle">My band's Spotify</a></div>
-      </div>
-   </section>
+    <section>
+         <h2 class="titles2" id="contactTitle">Contact</h2>
+       <div class="contactContents">
+            <div class="underline" id="phone">+52 55 2916 2619</div>
+          <div class="underline" id="email">marcosmunozr15@gmail.com</div>
+          <div class="underline"><a href="https://github.com/marcusmr15?tab=repositories" target="_blank" class="linksStyle">GitHub</a></div>
+          <div class="underline"><a href="https://www.linkedin.com/in/marcos-mu%C3%B1oz-rodr%C3%ADguez-99a51a1b2/" target="_blank" class="linksStyle">LinkedIn</a></div>
+          <div class="underline"><a href="https://open.spotify.com/artist/2aIYbcsZ3GlFy8fDPDJrcc?si=c9x_zDpzSh6vvQYLtn3fUw" target="_blank" class="linksStyle">My band's Spotify</a></div>
+         </div>
+    </section>
+   </div>
 
  </main>
-
- <footer class="footer"> 
- <!-- <span>Made with ❤️ and CSS</span> -->
- </footer>
 
 </body>
 </html>

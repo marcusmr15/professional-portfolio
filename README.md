@@ -2,7 +2,7 @@
 
 ## Description
 
-The refactoring of this webpage intends to ensure the website's accessibility features, provide a detailed description of the website's title, and ensure that the HTML's code elements are concise and follow logical structuring independent of the page’s styling.
+This webpage intends to showcase the skills and coding abilities of its programmer, Marcos Munoz by displaying advanced usage of the HTML and CSS coding languages
 
 [Click here to view the live webpage](https://marcusmr15.github.io/professional-portfolio/)
 
@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-This website was designed to provide professional portfolio of work thats showcases my skills and talents to employers looking to fill a part-time or full-time position. It highlights my strongest coding work in HTML and CSS. This is the first step in building a catalogue of several deployed projects to be publish ahead!
+This website was designed to provide a professional portfolio of work that showcases my skills and talents to employers looking to fill a part-time or full-time position as a web developer. It highlights my coding work in HTML and CSS. This is the first step in building a catalog of several deployed projects to be published!
 
 ## Credits
 
