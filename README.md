@@ -4,11 +4,18 @@
 
 This webpage intends to showcase the skills and coding abilities of its programmer, Marcos Munoz by displaying advanced usage of the HTML and CSS coding languages
 
-[Click here to view the live webpage](https://marcusmr15.github.io/professional-portfolio/)
+[Click here](https://marcusmr15.github.io/professional-portfolio/) to view the live webpage! 🌎
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
 ## Installation
 
-N/A
+N/A. 
 
 ## Usage
 
@@ -16,7 +23,9 @@ This website was designed to provide a professional portfolio of work that showc
 
 ## Credits
 
-N/A.
+This project was created by [Marcos Munoz](https://github.com/marcusmr15) with the aid of:
+
+* The `ChatGPT` AI developed by __Open AI__.
 
 ## License
 

@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon
+Icon\r
+
+# Thumbnails
+._*
+
+# macOS Finder attributes
+.Spotlight-V100
+.Trashes
+
+# macOS specific cache files
+*.swp
+*.lock
+*.tmp
+*.bak
+*.old
+
+# Temporary files created by macOS
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.metadata_never_index
+
+# macOS Trash folder, if not excluded by default
+.Trash
+
+# Vim swap files
+.*.swp
+.*.swo
