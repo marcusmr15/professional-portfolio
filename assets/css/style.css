@@ -1,58 +1,74 @@
+:root {
+  --font-montserrat: "Montserrat", system-ui;
+  --dark-navy-blue: #043e6f;
+  --vibrant-sky-blue: #2f70a2;
+  --warm-bronze: #ab6f32;
+  --brighter-green: #98c379;
+  --soft-light-gray: #eaeaea;
+}
+
 body {
-  color: #231b13;
-  font-size: 20px;
-  font-family: sans-serif;
-  line-height: 1.5;
+  font-size: 21px;
+  font-family: var(--font-montserrat);
 }
 
 header {
-  background-color: #043e6f;
-  color: #879483;
+  background-color: var(--dark-navy-blue);
+  color:  var(--brighter-green);
 }
 
 .headerLayout {
-  padding-top: 10px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding: 20px;
+  padding-right: 6%;
+  padding-left: 0%;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#headerTitle {
-  background-color: #879483;
-  color: #063970;
-  padding-right: 10px;
-  width: 300px;
-  text-align: end;
-  font-size: 30px;
-}
-.headerLinks {
+
+h1 {
+  background-color: var(--brighter-green);
+  color: var(--dark-navy-blue);
   padding: 10px;
-  padding-right: 50px;
-  text-align: center;
-}
-#space {
-  width: 500px;
-}
-#linksBorder {
-  text-decoration: underline 2px solid #879483;
+  padding-left: 10%;
+  width: fit-content;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 10px 10px 0 0 rgba(128, 128, 128, 0.331);
 }
 
+.headerLinks {
+  align-content: end;
+  padding-bottom: 15px;
+}
+
+a {
+  color:  var(--brighter-green);
+  text-decoration:  underline none; 
+}
+
+
 .imageLayout {
-  padding: 10px;
-  background-color: #2f70a2;
+  padding: 30px;
+  background-color: var(--vibrant-sky-blue);
 }
 #image {
   transform: scaleX(-1);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
-#subtitle {
-  background-color: #879483;
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
+
+h3 {
+  background-color: var(--brighter-green);
+  color: var(--dark-navy-blue);
+  padding: 20px;
+  padding-right: 5%;
+  text-align: end;
+  margin-top: 30px;
+  border-radius: 10px;
 }
 
 #border2 {
@@ -98,4 +114,12 @@ img:hover {
 #textAbout {
   border: 5px solid grey;
   text-wrap:wrap;
+}
+
+footer {
+  background-color: var(--soft-light-gray);
+  padding: 30px;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 80%;
 }
