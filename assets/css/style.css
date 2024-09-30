@@ -65,10 +65,16 @@ h3 {
   background-color: var(--brighter-green);
   color: var(--dark-navy-blue);
   padding: 20px;
-  padding-right: 5%;
-  text-align: end;
   margin-top: 30px;
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.h3space {
+  width: 15px;
 }
 
 #border2 {
@@ -121,5 +127,5 @@ footer {
   padding: 30px;
   text-align: center;
   margin-top: 25px;
-  font-size: 80%;
+  font-size: 75%;
 }
