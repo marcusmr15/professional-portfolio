@@ -21,10 +21,10 @@ header {
 }
 
 .headerLayout {
-  padding: 20px;
-  padding-right: 6%;
+  padding: 30px;
   padding-left: 0px;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
+  padding-right: 35px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,8 +42,7 @@ h1 {
 }
 
 .headerSpace {
-  width: 2%;
-
+  margin: 15px;
 }
 
 #navbar {
@@ -53,13 +52,39 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 
 a {
   color:  var(--brighter-green);
   text-decoration:  underline none; 
 }
+
+button {
+  width: fit-content;
+  height: fit-content;
+  align-self: flex-end;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 70%;
+  background-color: var(--soft-light-gray);
+  cursor: pointer;
+  transition: transform 10s;
+  transition: ease-in 0.05s;
+}
+
+button:hover {
+  background-color: rgb(152, 150, 150);
+  
+}
+
+button:active {
+  transform: scale(0.97);
+  background-color: rgb(181, 177, 177);
+}
+
+/*  main */
 
 .imageLayout {
   padding: 30px;
@@ -137,7 +162,7 @@ h3 {
 
 footer {
   background-color: var(--soft-light-gray);
-  padding: 30px;
+  padding: 50px;
   text-align: center;
   margin-top: 25px;
   font-size: 75%;
@@ -199,16 +224,29 @@ footer {
 } */
 
 /* Responsiveness */
-@media (max-width: 918px) {
+@media (max-width: 1055px) {
   .headerLayout {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
   }
 
   #navbar {
     padding-bottom: 0%;
-    padding-top: 30px;
-    padding-left: 10%;
+    padding-left: 20%;
     width: 80%;
   }
+}
+
+@media (max-width: 800px) {
+  h3 {
+    flex-direction: column;
+    line-height: 1.5;
+    padding: 15px;
+  }
+
+  .roleDevider {
+    display: none;
+  }
+
 }
