@@ -38,7 +38,7 @@ h1 {
   width: fit-content;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: 10px 10px 0 0 rgba(128, 128, 128, 0.682);
+  box-shadow: 10px 10px 3px 0 rgb(83, 83, 83);
 }
 
 .headerSpace {
@@ -64,45 +64,44 @@ button {
   height: fit-content;
   align-self: flex-end;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   border-radius: 10px;
   border: 2px solid black;
   font-size: 70%;
   background-color: var(--soft-light-gray);
   cursor: pointer;
-  transition: transform 10s;
-  transition: ease-in 0.05s;
+  transition: ease-in-out 0.08s;
 }
 
 button:hover {
-  background-color: rgb(152, 150, 150);
+  background-color: rgb(177, 174, 174);
   
 }
 
 button:active {
   transform: scale(0.97);
-  background-color: rgb(181, 177, 177);
+  background-color: rgb(211, 208, 208);
 }
 
 /*  main */
 
 .imageLayout {
-  padding: 30px;
-  background-color: var(--vibrant-sky-blue);
+  /* padding: 30px; */
+  /* background-color: var(--vibrant-sky-blue); */
 }
 #image {
   transform: scaleX(-1);
   width: 100%;
   height:100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 
 h3 {
   background-color: var(--brighter-green);
   color: var(--dark-navy-blue);
   padding: 20px;
-  margin-top: 30px;
+  margin: 10px;
+  /* margin-top: 30px; */
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -120,44 +119,55 @@ h3 {
 
 .workLayout {
   display: flex;
-  padding: 10px;
-  padding-bottom: 50px;
+  margin: 30px;
+  border: 15px solid var(--warm-bronze);
 }
 .image2 {
   width: 100%;
   height: 100%;
-  border: 10px solid var(--warm-bronze);
   display: flex;
   flex-wrap: wrap;
-  transition: transform 0.3s ease;
+  transition: ease-in 0.5s;
 }
 
 .image2:hover {
-  transform: scale(1.2);
+  transform: scale(1.08);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.workSpace {
+  padding: 10px;
+  background-color: var(--warm-bronze);
 }
 
 .contactContents {
+  margin: 30px;
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 30px;
-  
+  flex-wrap: wrap;
 }
-.underline {
-  border-bottom: 4px solid var(--brighter-green);
-  width: fit-content;
+
+.linkImages {
+  width: 200px;
+  height: 200px;
 }
 
 .linksStyle {
   color: blue;
 }
 
-.titles2 {
+/* subtitles */
+h2 { 
   font-size: 50px;
+  margin-top: 20px;
 }
 
 #textAbout {
   border: 5px solid grey;
   text-wrap:wrap;
+  text-align: justify;
+  padding: 15px;
 }
 
 footer {
@@ -225,6 +235,7 @@ footer {
 
 /* Responsiveness */
 @media (max-width: 1055px) {
+  
   .headerLayout {
     display: flex;
     flex-direction: column;
@@ -239,6 +250,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+  body {
+    font-size: 90%;
+  }
+
   h3 {
     flex-direction: column;
     line-height: 1.5;
@@ -248,5 +263,15 @@ footer {
   .roleDevider {
     display: none;
   }
+
+  .workLayout {
+    flex-direction: column;
+  }
+
+  /* .contactContents {
+    flex-direction: column;
+    justify-content: center;
+
+  } */
 
 }
