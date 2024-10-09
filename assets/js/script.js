@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     langSwitcher.addEventListener('click', switchLanguage);
 
 
-    //! Get the email address element and the copy icon
+    // ! Get the email address element and the copy icon
     const emailAddress = document.getElementById('emailAddress').textContent;
     const copyIcon = document.getElementById('copyIcon');
 
@@ -59,6 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add click event listener to the copy icon
     copyIcon.addEventListener('click', copyEmailToClipboard);
+
+
+    // ! Preview PDF file (CV)
+    const resumeDiv = document.getElementById('resume');
+
+    resumeDiv.addEventListener('click', function () {
+        // Open the PDF in a new tab
+        window.open('./assets/CV - Marcos Muñoz (English).pdf', '_blank');
+    });
 });
 
 
