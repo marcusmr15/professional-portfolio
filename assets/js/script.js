@@ -1,5 +1,6 @@
+//  Wait for the DOM elements to load before executing the logic
 document.addEventListener('DOMContentLoaded', function () {
-    // Get elements
+    // Get elements for language switcher
     const langSwitcher = document.getElementById('languageBtn');
     const translatableElements = document.querySelectorAll('[data-en]');
     
@@ -11,23 +12,55 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentLanguage === 'en') {
             // Switch to Spanish
             translatableElements.forEach(el => {
-                el.textContent = el.getAttribute('data-es');
+                if (el.tagName.toLowerCase() === 'img') {
+                    // If the element is an image, update the alt attribute
+                    el.setAttribute('alt', el.getAttribute('data-es'));
+                } else {
+                    // Otherwise, update the text content
+                    el.textContent = el.getAttribute('data-es');
+                }
             });
-            langSwitcher.textContent = 'English';
+            langSwitcher.textContent = '🌐 English';
             currentLanguage = 'es';
         } else {
             // Switch to English
             translatableElements.forEach(el => {
-                el.textContent = el.getAttribute('data-en');
+                if (el.tagName.toLowerCase() === 'img') {
+                    // If the element is an image, update the alt attribute
+                    el.setAttribute('alt', el.getAttribute('data-en'));
+                } else {
+                    // Otherwise, update the text content
+                    el.textContent = el.getAttribute('data-en');
+                }
             });
-            langSwitcher.textContent = 'Español';
+            langSwitcher.textContent = '🌐 Español';
             currentLanguage = 'en';
         }
     }
     
     // Event listener to language button
     langSwitcher.addEventListener('click', switchLanguage);
+
+
+    //! Get the email address element and the copy icon
+    const emailAddress = document.getElementById('emailAddress').textContent;
+    const copyIcon = document.getElementById('copyIcon');
+
+    // Function to copy the email address
+    function copyEmailToClipboard() {
+        // Use the Clipboard API to copy text
+        navigator.clipboard.writeText(emailAddress).then(function() {
+            // Show feedback to the user (optional)
+            alert('Email copied to clipboard!');
+        }).catch(function(error) {
+            console.error('Error copying text: ', error);
+        });
+    }
+
+    // Add click event listener to the copy icon
+    copyIcon.addEventListener('click', copyEmailToClipboard);
 });
+
 
 // Slow scroll down when clicking the anchor elements
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
