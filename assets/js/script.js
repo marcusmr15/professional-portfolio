@@ -48,14 +48,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to copy the email address
     function copyEmailToClipboard() {
-        // Use the Clipboard API to copy text
-        navigator.clipboard.writeText(emailAddress).then(function() {
-            // Show feedback to the user (optional)
+    // Use the Clipboard API to copy text
+    navigator.clipboard.writeText(emailAddress).then(function() {
+        // Show feedback to the user (adjust message based on language)
+        if (currentLanguage === 'en') {
             alert('Email copied to clipboard!');
-        }).catch(function(error) {
-            console.error('Error copying text: ', error);
-        });
+        } else {
+            alert('¡Correo electrónico copiado!');
+        }
+    }).catch(function(error) {
+        console.error('Error copying text: ', error);
+    });
     }
+
 
     // Add click event listener to the copy icon
     copyIcon.addEventListener('click', copyEmailToClipboard);
