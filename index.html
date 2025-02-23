@@ -18,56 +18,78 @@
 </head>
 
 <body>
- <header>
-   <div class="headerLayout">
-      <h1>Marcos Muñoz</h1>
-      <div class="headerSpace"></div>
-      <div id="navbar">
-         <a href="#aboutMeTitle" data-en="About Me" data-es="Sobre Mi">About Me</a>
-         <a href="#workTitle" data-en="Work" data-es="Proyectos">Work</a>
-         <a href="#contactTitle" data-en="Contact Me" data-es="Contacto">Contact Me</a>
-         <div data-en="Résumé" data-es="Currículum" id="resume">Résumé</div>
+   <header>
+      <div id="headerTitle">
+         <h1>Marcos Muñoz</h1>
+         <h4 data-en="SOFTWARE ENGINEER" data-es="INGENIERO DE SOFTWARE">SOFTWARE ENGINEER</h4>
       </div>
-      <div class="headerSpace"></div>
-      <button id="languageBtn">🌐 Español</button>
-   </div>
- </header>
- 
- <main>
-   <div class="imageLayout">
-      <img src="./assets/images/wallpaper/marcosmunoz-wallpaper.png" alt="Image of Marcos Munoz's left profile, wearing glasses, and a blue sky in the background." data-en="Image of Marcos Munoz's left profile, wearing glasses, and a blue sky in the background." data-es="Imagen del perfil izquierdo de Marcos Muñoz, usando lentes, y con un cielo azul de fondo." id="wallpaperImage"/>
-       <h3>
-         <p data-en="QA Manual Tester" data-es="Tester Manual de Calidad">QA Manual Tester</p>
-         <div class="h3space"></div>
-         <p class="roleDevider">|</p>
-         <div class="h3space"></div>
-         <p data-en="Web Developer" data-es="Desarrollador Web">Web Developer</p>
-         <div class="h3space"></div>
-         <p class="roleDevider">|</p>
-         <div class="h3space"></div>
-         <p data-en="Audio Engineer" data-es="Ingeniero de Audio">Audio Engineer</p>
-       </h3>
-   </div>
 
-   <div id="border2">
-      <section>
-         <div>
-            <h2 id="aboutMeTitle" data-en="About Me" data-es="Sobre Mi">About Me</h2>
-         <p id="textAbout" data-en="I am a dedicated and creative professional passionate about technology and entertainment. This has allowed me to thrive in dynamic environments where collaboration and adaptability are key. My ability to learn quickly and develop new skills enables me to confidently tackle challenges and deliver high-quality results on projects. Additionally, my strong organizational and communication skills allow me to work effectively within teams while consistently meeting deadlines." data-es="Soy un profesionista dedicado y creativo, apasionado por la tecnología y el entretenimiento, lo que me ha permitido sobresalir en entornos dinámicos donde la colaboración y la adaptabilidad son esenciales. Mi capacidad para aprender rápidamente y desarrollar nuevas habilidades me permite enfrentar desafíos con confianza y entregar resultados de alta calidad en los proyectos. Además, mis habilidades de organización y de comunicación me han permitido trabajar de manera eficiente dentro de diversaos equipos, mientras cumplo consistentemente con los plazos.">I am a dedicated and creative professional passionate about technology and entertainment. This has allowed me to thrive in dynamic environments where collaboration and adaptability are key. My ability to learn quickly and develop new skills enables me to confidently tackle challenges and deliver high-quality results on projects Additionally, my strong organizational and communication skills allow me to work effectively within teams while consistently meeting deadlines.</p>
-       </div>
+      <!-- * Navigation bar -->
+      <nav id="navbar">
+         <a href="#skillsTitle" data-en="Skills & Tools" data-es="Competencias" class="navBtns">Skills & Tools</a>
+         <p class="itemDivider">|</p>
+         <a href="#workTitle" data-en="Projects" data-es="Proyectos" class="navBtns">Projects</a>
+         <p class="itemDivider">|</p>
+         <a href="#contactTitle" data-en="Contact Me" data-es="Contacto" class="navBtns">Contact Me</a>
+         <p class="itemDivider">|</p>
+         <div data-en="Résumé" data-es="Currículum" id="resume" class="navBtns">Résumé</div>
+         <p class="itemDivider">|</p>
+         <img id="globeBtn" src="./assets/images/icons/globe-with-meridians.png" alt="Globe with meridians emoji."/>
+         <div id="languageDropdown" class="dropdown hidden">
+            <div class="dropdown-item" data-lang="en" data-en="🇺🇸 EN" data-es="🇺🇸 ING">🇺🇸 EN</div>
+            <div class="dropdown-item" data-lang="es" data-en="🇲🇽 SP" data-es="🇲🇽 ESP">🇲🇽 SP</div>
+         </div>
+      </nav>
+
+      <!-- Hamburger menu -->
+      <nav id="hamMenu" class="active">
+         <span></span>
+         <span></span>
+         <span></span>
+      </nav>
+      <!-- Hamburger menu Items-->
+      <div id="navbarHam" class="active">
+         <ul>
+            <li>
+               <a href="#skillsTitle" data-en="Skills & Tools" data-es="Competencias" class="navBtns">Skills & Tools</a>
+            </li>
+            <li>
+               <a href="#workTitle" data-en="Projects" data-es="Proyectos" class="navBtns">Projects</a>
+            </li>
+            <li>
+               <a href="#contactTitle" data-en="Contact Me" data-es="Contacto" class="navBtns">Contact Me</a>
+            </li>
+            <li>
+               <div data-en="Résumé" data-es="Currículum" id="resumeHam" class="navBtns">Résumé</div>
+            </li>
+            <li>
+               <img id="globeBtnHam" src="./assets/images/icons/globe-with-meridians.png" alt="Globe with meridians emoji."/>
+               <div id="languageDropdownHam" class="dropdown hidden">
+                  <div class="dropdown-item" data-lang="en" data-en="🇺🇸 EN" data-es="🇺🇸 ING">🇺🇸 EN</div>
+                  <div class="dropdown-item" data-lang="es" data-en="🇲🇽 SP" data-es="🇲🇽 ESP">🇲🇽 SP</div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </header>
+
+   <!-- Website's Content -->
+   <main>
+      <section id="aboutMeSection">
+         <h2 id="skillsTitle" data-en="About Me" data-es="Sobre Mi">About Me</h2>
+         <div id="aboutMeLayout">
+            <div id="textAbout">
+               <p data-en="I am a dedicated and creative professional whose passionate about technology and entertainment alike. My tech journey began with a degree in audio engineering, where I developed coding fundamentals in Python, C#, and Arduino, along with skills in software management, file organization, and attention to detail. This foundation led to my first tech role as a QA Tester, sparking my interest in web development." data-es="Soy un profesional dedicado y creativo, apasionado tanto por la tecnología como por el entretenimiento. Mi camino en la tecnología comenzó con una licenciatura en ingeniería de audio, donde adquirí fundamentos de programación en Python, C# y Arduino, además de habilidades en gestión de software, organización de archivos y atención al detalle. Esta base me llevó a mi primer rol en tecnología como QA Tester, despertando mi interés por el desarrollo web.">I am a dedicated and creative professional whose passionate about technology and entertainment alike. My tech journey began with a degree in audio engineering, where I developed coding fundamentals in Python, C#, and Arduino, along with skills in software management, file organization, and attention to detail. This foundation led to my first tech role as a QA Tester, sparking my interest in web development.</p>
+               <div class="aboutTextSpace"></div>
+               <p data-en="As a quick learner and adaptable team player, I enjoy taking on new challenges and delivering high-quality results. I thrive in dynamic environments that blend technical skills with creativity, staying current with industry trends. My commitment to growth, along with strong organizational and communication skills, makes me well-suited for a full transition into web development." data-es="Como un aprendiz rápido y un colaborador adaptable, disfruto asumir nuevos desafíos y ofrecer resultados de alta calidad. Me desenvuelvo bien en entornos dinámicos que combinan habilidades técnicas con creatividad, manteniéndome siempre al día con las tendencias de la industria. Mi compromiso con el crecimiento, junto con sólidas habilidades organizativas y de comunicación, me hacen un candidato ideal para una transición completa al desarrollo web.">As a quick learner and adaptable team player, I enjoy taking on new challenges and delivering high-quality results. I thrive in dynamic environments that blend technical skills with creativity, staying current with industry trends. My commitment to growth, along with strong organizational and communication skills, makes me well-suited for a full transition into web development.</p>
+            </div>
+            <img src="./assets/images/marcos-squarePicture.png" alt="Image of Marcos Munoz's left profile, wearing glasses, and a blue sky in the background." data-en="Image of Marcos Munoz's left profile, wearing glasses, and a blue sky in the background." data-es="Imagen del perfil izquierdo de Marcos Muñoz, usando lentes, y con un cielo azul de fondo." id="wallpaperImage"/>
+         </div>
       </section>
 
       <section>
          <h2 id="workTitle" data-en="Work" data-es="Proyectos">Work</h2>
          <div id="workLayoutScroll">
-            <div id="workLayoutStart">
-               <div>
-                  <a href="https://the-weekly-log-7ca1ef8a58cb.herokuapp.com/" target="_blank">
-                     <img src="./assets/images/projects/the-weekly-log-home.png" alt="Image of 'the Weekly Log' website's dashboard."  data-en="Image of 'the Weekly Log' website's dashboard." data-es="Imagen de la página principal del sitio web: 'the Weekly Log'." class="image2"/>
-                  </a>
-               </div>
-            </div>
-   
             <div class="workLayout">
                <div>
                   <a href="https://marcusmr15.github.io/code-quiz/" target="_blank">
@@ -122,9 +144,8 @@
             </a>
          </div>
       </section>
-   </div>
+   </main>
 
- </main>
 
  <footer>
    <div id="creditsFooter">
