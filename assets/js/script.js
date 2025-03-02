@@ -6,77 +6,114 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbarHam = document.querySelector('#navbarHam');
 
     hamMenu.addEventListener('click', () => {
-        hamMenu.classList.toggle('open');  // This is for animating the menu button
-        navbarHam.classList.toggle('open'); // This makes the menu appear
+        hamMenu.classList.toggle('open');  // This is for animating the hamMenu button to an 'X'
+        if (navbarHam.style.display === "none" || !navbarHam.style.display) {
+            navbarHam.style.display = "flex";  // Show the menu
+            setTimeout(() => {
+                navbarHam.style.transform = "translateX(0%)";
+            }, 10);  // Delay to allow display change before transform triggers
+        } else {
+            navbarHam.style.transform = "translateX(100%)";
+            setTimeout(() => {
+                navbarHam.style.display = "none";  // Hide after animation completes
+            }, 300); // Match the transition time in CSS
+        }
     });
 
-    // Get elements for the dropdown
+    // Get elements for the dropdown in the regular navbar and hamburger menu
     const globeBtn = document.getElementById('globeBtn');
     const globeBtnHam = document.getElementById('globeBtnHam');
     const dropdown = document.getElementById('languageDropdown');
+    const dropdownHam = document.getElementById('languageDropdownHam');
     const translatableElements = document.querySelectorAll('[data-en]');
 
     let currentLanguage = 'en'; // Default language
+    let isDropdownOpen = false; // Track visibility for the regular menu
+    let isDropdownOpenHam = false; // Track visibility for the hamburger menu
 
-    // Track dropdown visibility state
-    let isDropdownOpen = false;
+    // Function to toggle dropdown visibility
+    function toggleDropdown(dropdownElement, isHamMenu = false) {
+        if (isHamMenu) {
+            isDropdownOpenHam = !isDropdownOpenHam;
+            dropdownElement.classList.toggle('hiddenHam'); // Just toggle it
+        } else {
+            isDropdownOpen = !isDropdownOpen;
+            dropdownElement.classList.toggle('hidden');
+        }
+    }
 
-    // Toggle dropdown visibility
+    // Regular navbar dropdown
     globeBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent this click from triggering the outside click listener
-        isDropdownOpen = !isDropdownOpen;
-        dropdown.classList.toggle('hidden', !isDropdownOpen);
+        e.stopPropagation(); 
+        toggleDropdown(dropdown);
     });
 
+    // Hamburger menu dropdown
     globeBtnHam.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent this click from triggering the outside click listener
-        isDropdownOpen = !isDropdownOpen;
-        dropdown.classList.toggle('hidden', !isDropdownOpen);
+        e.stopPropagation();
+        toggleDropdown(dropdownHam, true);
     });
 
-    // Handle language selection
-    document.querySelectorAll('.dropdown-item').forEach(item => {
+    // Handle language selection for both dropdowns
+    document.querySelectorAll('.dropdown-item, .dropdown-item-Ham').forEach(item => {
         item.addEventListener('click', (e) => {
             const selectedLang = e.target.dataset.lang;
-
-            // Trigger transition reset before updating content
+    
             if (selectedLang !== currentLanguage) {
-                resetSlideInTransition();
-
-                // Switch language logic
                 translatableElements.forEach(el => {
                     if (el.tagName.toLowerCase() === 'img') {
-                        // If the element is an image, update the alt attribute
                         el.setAttribute('alt', el.getAttribute(`data-${selectedLang}`));
                     } else {
-                        // Otherwise, update the text content
                         el.textContent = el.getAttribute(`data-${selectedLang}`);
                     }
                 });
 
-                // Update the globe button text to show the opposite language
+                // Reset h1 animation
+                resetSlideInTransition();
+
+                // Update the globe button texts
                 globeBtn.textContent = selectedLang === 'en' ? '🌐 Español' : '🌐 English';
+                globeBtnHam.textContent = selectedLang === 'en' ? '🌐 Español' : '🌐 English';
+
                 currentLanguage = selectedLang;
             }
 
-            // Hide dropdown after selection
-            dropdown.classList.add('hidden');
-            isDropdownOpen = false;
+            // Instead of directly adding classes, use the toggle function to close properly
+            if (isDropdownOpen) {
+                toggleDropdown(dropdown);
+            }
+            if (isDropdownOpenHam) {
+                toggleDropdown(dropdownHam, true);
+            }
         });
     });
 
-    // Close dropdown when clicking outside of it
-    document.addEventListener('click', () => {
-        if (isDropdownOpen) {
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target) && event.target !== globeBtn && isDropdownOpen) {
             dropdown.classList.add('hidden');
             isDropdownOpen = false;
         }
-    });
+        if (!dropdownHam.contains(event.target) && event.target !== globeBtnHam && isDropdownOpenHam) {
+            dropdownHam.classList.add('hiddenHam');
+            isDropdownOpenHam = false;
+        }
+    });    
+    
+    // Prevent clicks inside dropdowns from closing them
+    dropdown.addEventListener('click', (event) => event.stopPropagation());
+    dropdownHam.addEventListener('click', (event) => event.stopPropagation());
 
-    // Prevent clicks inside the dropdown from closing it
-    dropdown.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent the document click event
-    });
+    // Function to reset the h1 animation
+    function resetSlideInTransition() {
+        const h1 = document.querySelector('h1');
+        
+        if (h1) {
+            h1.style.animation = 'none';  // Remove animation temporarily
+            void h1.offsetWidth;  // Force a reflow/repaint
+            h1.style.animation = 'slide-in 1s ease-out forwards';  // Reapply animation
+        }
+    }
 
     // ! Get the email address element and the copy icon
     const emailAddress = document.getElementById('emailAddress').textContent;
@@ -109,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open('./assets/documents/CV - Marcos Munoz.pdf', '_blank');
     });
 
-    resumeDivHam .addEventListener('click', function () {
+    resumeDivHam.addEventListener('click', function () {
         // Open the PDF in a new tab
         window.open('./assets/documents/CV - Marcos Munoz.pdf', '_blank');
     });
@@ -128,17 +165,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Function to reset the slide-in transition
-    function resetSlideInTransition() {
-        const h1 = document.querySelector('h1');
-        
-        // Temporarily remove the animation
-        h1.style.animation = 'none';
-        
-        // Force reflow/repaint so the browser registers the change
-        void h1.offsetWidth;
-        
-        // Re-apply the animation
-        h1.style.animation = 'slide-in 1s ease-out forwards';
-    }
 });
